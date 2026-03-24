@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Noto+Sans+Sinhala:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --gold: #F5A623;
+  --deep-red: #C0392B;
+  --forest-green: #1A7A4A;
+  --cream: #FFF8E7;
+  --dark-bg: #0F0A00;
+  --card-bg: rgba(255, 248, 231, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Poppins', 'Noto Sans Sinhala', sans-serif;
+  background: var(--dark-bg);
+  color: var(--cream);
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Festive gradient background */
+.festive-bg {
+  background: radial-gradient(ellipse at top, #3D1A0A 0%, #0F0A00 50%, #0A1F0F 100%);
+  min-height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+
+.festive-bg::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(245, 166, 35, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(192, 57, 43, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(26, 122, 74, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Animated background particles */
+.particle {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float linear infinite;
+  z-index: 0;
+}
+
+@keyframes float {
+  0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+}
+
+/* Gold shimmer button */
+.btn-gold {
+  background: linear-gradient(135deg, #F5A623, #E8860A, #F5A623);
+  background-size: 200% 200%;
+  animation: shimmer 3s ease infinite;
+  color: #1a0a00;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 20px rgba(245, 166, 35, 0.4);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(245, 166, 35, 0.6);
+}
+
+.btn-gold:active {
+  transform: scale(0.97);
+}
+
+.btn-red {
+  background: linear-gradient(135deg, #C0392B, #A93226, #C0392B);
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 20px rgba(192, 57, 43, 0.4);
+}
+
+.btn-green {
+  background: linear-gradient(135deg, #1A7A4A, #145E38, #1A7A4A);
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 20px rgba(26, 122, 74, 0.4);
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 248, 231, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 166, 35, 0.2);
+  border-radius: 20px;
+}
+
+/* Tap button */
+.tap-btn {
+  background: radial-gradient(circle at 30% 30%, #FFD700, #F5A623, #C0392B);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 
+    0 0 0 4px rgba(245, 166, 35, 0.3),
+    0 0 0 8px rgba(245, 166, 35, 0.15),
+    0 20px 60px rgba(192, 57, 43, 0.5);
+  transition: box-shadow 0.1s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.tap-btn:active {
+  box-shadow: 
+    0 0 0 6px rgba(245, 166, 35, 0.5),
+    0 0 0 12px rgba(245, 166, 35, 0.2),
+    0 10px 40px rgba(192, 57, 43, 0.8);
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Timer ring */
+.timer-ring {
+  filter: drop-shadow(0 0 8px rgba(245, 166, 35, 0.6));
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(245, 166, 35, 0.4); border-radius: 2px; }
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Rank badge */
+.rank-gold { color: #FFD700; text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+.rank-silver { color: #C0C0C0; text-shadow: 0 0 10px rgba(192, 192, 192, 0.3); }
+.rank-bronze { color: #CD7F32; text-shadow: 0 0 10px rgba(205, 127, 50, 0.3); }
