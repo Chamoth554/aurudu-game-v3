@@ -208,7 +208,7 @@ export default function AuruduRecipes() {
   };
 
   return (
-    <div className="aurudu-recipes-container">
+    <div className="festive-bg aurudu-recipes-container">
       <motion.div
         className="recipes-header"
         initial={{ opacity: 0, y: -20 }}

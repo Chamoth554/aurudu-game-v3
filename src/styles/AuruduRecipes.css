@@ -1,9 +1,8 @@
 .aurudu-recipes-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f0e6d2 0%, #e8d5c4 100%);
   padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  font-family: 'Poppins', 'Noto Sans Sinhala', sans-serif;
+  color: #FFF8E7;
 }
 
 .recipes-header {
@@ -16,32 +15,33 @@
   position: absolute;
   left: 0;
   top: 0;
-  background: #d4a574;
-  border: 2px solid #8b6f47;
+  background: #F5A623;
+  border: 2px solid #F5A623;
   padding: 10px 15px;
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  color: white;
+  color: #0F0A00;
   transition: all 0.3s ease;
 }
 
 .back-button:hover {
-  background: #c49464;
+  background: #E09018;
+  border-color: #E09018;
   transform: scale(1.05);
 }
 
 .recipes-header h1 {
   font-size: 2.5em;
-  color: #8b4513;
+  color: #F5A623;
   margin: 20px 0 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .recipes-header .subtitle {
   font-size: 1.1em;
-  color: #666;
+  color: #FFF8E7;
   font-style: italic;
 }
 
@@ -56,19 +56,20 @@
 }
 
 .recipe-card {
-  background: white;
+  background: rgba(255, 248, 231, 0.08);
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid #f0e6d2;
+  border: 2px solid #F5A623;
 }
 
 .recipe-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-  border-color: #d4a574;
+  box-shadow: 0 8px 12px rgba(245, 166, 35, 0.2);
+  border-color: #F5A623;
+  background: rgba(255, 248, 231, 0.12);
 }
 
 .recipe-card.expanded {
@@ -80,8 +81,8 @@
   align-items: center;
   gap: 15px;
   padding: 20px;
-  background: linear-gradient(to right, #faf5f0, #f5f0e8);
-  border-bottom: 2px solid #f0e6d2;
+  background: rgba(245, 166, 35, 0.1);
+  border-bottom: 2px solid #F5A623;
 }
 
 .recipe-emoji {
@@ -97,18 +98,18 @@
 .recipe-title h2 {
   margin: 0;
   font-size: 1.5em;
-  color: #8b4513;
+  color: #F5A623;
 }
 
 .recipe-english {
   margin: 5px 0 0;
   font-size: 0.9em;
-  color: #666;
+  color: #FFF8E7;
 }
 
 .expand-icon {
   font-size: 28px;
-  color: #d4a574;
+  color: #F5A623;
   font-weight: bold;
   flex-shrink: 0;
 }
@@ -119,12 +120,12 @@
 
 .recipe-description {
   font-size: 1em;
-  color: #555;
+  color: #FFF8E7;
   line-height: 1.6;
   margin-bottom: 20px;
   padding: 15px;
-  background: #faf5f0;
-  border-left: 4px solid #d4a574;
+  background: rgba(245, 166, 35, 0.08);
+  border-left: 4px solid #F5A623;
   border-radius: 4px;
 }
 
@@ -134,7 +135,7 @@
 
 .recipe-section h3 {
   font-size: 1.2em;
-  color: #8b4513;
+  color: #F5A623;
   margin-bottom: 12px;
   display: flex;
   align-items: center;
@@ -150,17 +151,17 @@
 .ingredients-list li {
   padding: 10px 15px;
   margin-bottom: 8px;
-  background: #faf5f0;
-  border-left: 4px solid #c9b095;
+  background: rgba(255, 248, 231, 0.05);
+  border-left: 4px solid #F5A623;
   border-radius: 4px;
-  color: #555;
+  color: #FFF8E7;
   font-size: 0.95em;
   line-height: 1.5;
 }
 
 .ingredients-list li:before {
   content: "• ";
-  color: #d4a574;
+  color: #F5A623;
   font-weight: bold;
   margin-right: 8px;
 }
@@ -174,10 +175,10 @@
 .steps-list li {
   padding: 12px 15px;
   margin-bottom: 10px;
-  background: #faf5f0;
-  border-left: 4px solid #c9b095;
+  background: rgba(255, 248, 231, 0.05);
+  border-left: 4px solid #F5A623;
   border-radius: 4px;
-  color: #555;
+  color: #FFF8E7;
   font-size: 0.95em;
   line-height: 1.6;
 }
@@ -185,7 +186,7 @@
 .steps-list li:before {
   content: counter(step-counter) ". ";
   counter-increment: step-counter;
-  color: #8b4513;
+  color: #F5A623;
   font-weight: bold;
   margin-right: 8px;
 }
@@ -197,15 +198,16 @@
 .recipes-footer {
   text-align: center;
   padding: 30px 20px;
-  background: linear-gradient(to right, #d4a574 0%, #c9b095 50%, #d4a574 100%);
+  background: rgba(245, 166, 35, 0.15);
   border-radius: 12px;
-  color: white;
+  color: #F5A623;
   font-size: 1.3em;
   font-weight: bold;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 2px solid #F5A623;
 }
 
 /* Responsive Design */
